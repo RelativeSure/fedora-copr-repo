@@ -36,6 +36,8 @@ Zenith sort of like top or htop but with zoom-able charts, CPU, GPU, network, an
 
 %install
 export CARGO_PROFILE_RELEASE_BUILD_OVERRIDE_OPT_LEVEL=3
+mkdir -p %{buildroot}%{_prefix}
+ls -larth %{buildroot}%{_prefix}
 %if 0%{?el8}
   $HOME/.cargo/bin/cargo install --root=%{buildroot}%{_prefix} --path=.
 %else
@@ -47,10 +49,10 @@ rm -f %{buildroot}%{_prefix}/.crates.toml \
 strip --strip-all %{buildroot}%{_bindir}/*
 
 %files
-%license LICENSE.md
-%doc README.md
+#%license LICENSE.md
+#%doc README.md
 %{_bindir}/zenith
 
 %changelog
 * Thu May 02 2024 [0.14.1]
-- Temporary fix
+- Yesss
