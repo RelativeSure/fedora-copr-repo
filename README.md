@@ -2,4 +2,4 @@
 
 
 ## Credit
-- ![](https://gitlab.com/VarLad/rpm-specs) for inspiration
+- https://gitlab.com/VarLad/rpm-specs for inspiration
