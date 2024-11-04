@@ -11,3 +11,23 @@ jobs:
   targets:
     - fedora-41-x86_64
     - fedora-rawhide-x86_64
+
+packages:
+  zellij:
+    downstream_package_name: zellij
+    upstream_package_name: zellij
+    upstream_project_url: https://github.com/zellij-org/zellij
+    paths:
+      - ./zellij
+    specfile_path: zellij.spec
+    files_to_sync:
+      - zellij.spec
+  zenith:
+    downstream_package_name: zenith
+    upstream_package_name: zenith
+    upstream_project_url: https://github.com/bvaisvil/zenith
+    paths:
+      - ./zenith
+    specfile_path: zenith.spec
+    files_to_sync:
+      - zenith.spec
