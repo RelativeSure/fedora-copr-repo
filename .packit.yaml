@@ -5,7 +5,6 @@ issue_repository: https://github.com/RelativeSure/fedora-copr-repo
 copy_upstream_release_description: true
 sync_changelog: true
 enable_net: true
-follow_fedora_branching: true
 
 jobs:
 - job: copr_build
