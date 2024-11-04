@@ -2,7 +2,7 @@
 # https://packit.dev/docs/configuration/
 
 issue_repository: https://github.com/RelativeSure/fedora-copr-repo
-copy_upstream_release_description: True
+copy_upstream_release_description: true
 
 jobs:
 - job: copr_build
