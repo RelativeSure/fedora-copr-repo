@@ -13,8 +13,13 @@ jobs:
   - &copr
     job: copr_build
     trigger: pull_request
+    owner: relativesure
+    project: general-repo
+    follow_fedora_branching: True
+    enable_net: True
     targets:
       - fedora-41-x86_x64
+      - fedora-rawhide-x64_x86
 
   - <<: *copr
     trigger: commit
