@@ -8,6 +8,9 @@ jobs:
   trigger: pull_request
   owner: relativesure
   project: general-repo
+  bootstrap: off
+  enable_net: True
+  follow_fedora_branching: True
   targets:
     - fedora-41-x86_64
     - fedora-rawhide-x86_64
