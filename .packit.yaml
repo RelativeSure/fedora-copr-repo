@@ -1,24 +1,46 @@
-packages:
+---
+# See the documentation for more information:
+# https://packit.dev/docs/configuration/
+upstream_project_url: https://github.com/RelativeSure/fedora-copr-repo.git
 
+actions: &common_actions
+  get-current-version:
+    - bash -c "grep -Po 'Version. +\K.*' *.spec"
+
+packages:
   zellij:
     downstream_package_name: zellij
     upstream_package_name: zellij
-    paths: 
+    paths:
       - ./zellij
     specfile_path: zellij.spec
-    files_to_sync: 
+    files_to_sync:
       - zellij.spec
+    upstream_tag_template: zellij-{version}
+    upstream_tag_include: "^zellij-.*"
+    actions:
+      <<: *common_actions
 
 jobs:
-  - &copr
-    job: copr_build
+  # Pull Request trigger
+  - job: copr_build
+    packages:
+      - zellij
     trigger: pull_request
-    owner: relativesure
+    owner: "@relativesure"
     project: general-repo
     targets:
-      - fedora-41-x86_x64
-      - fedora-rawhide-x64_x86
+      - fedora-41-x86_64
+      - fedora-rawhide-x86_64
 
-  - <<: *copr
+  # Master branch trigger
+  - job: copr_build
+    packages:
+      - zellij
     trigger: commit
     branch: master
+    owner: "@relativesure"
+    project: general-repo
+    targets:
+      - fedora-41-x86_64
+      - fedora-rawhide-x86_64
