@@ -5,6 +5,7 @@ issue_repository: https://github.com/RelativeSure/fedora-copr-repo
 copy_upstream_release_description: true
 sync_changelog: true
 enable_net: true
+srpm_build_deps: ["clang","cmake","cargo","rust","gcc","python3-devel","openssl-devel","perl-devel","openssl-perl","perl-FindBin","perl-IPC-Cmd"]
 
 jobs:
 - job: copr_build
