@@ -1,8 +1,6 @@
 ---
 # See the documentation for more information:
 # https://packit.dev/docs/configuration/
-upstream_project_url: https://github.com/RelativeSure/fedora-copr-repo.git
-
 actions: &common_actions
   get-current-version:
     - bash -c "grep -Po 'Version. +\K.*' *.spec"
