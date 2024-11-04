@@ -31,3 +31,12 @@ packages:
     specfile_path: zenith.spec
     files_to_sync:
       - zenith.spec
+  mise:
+    downstream_package_name: mise
+    upstream_package_name: mise
+    upstream_project_url: https://github.com/jdx/mise
+    paths:
+      - ./mise
+    specfile_path: mise.spec
+    files_to_sync:
+      - mise.spec
