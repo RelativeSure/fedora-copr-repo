@@ -3,15 +3,15 @@
 
 issue_repository: https://github.com/RelativeSure/fedora-copr-repo
 copy_upstream_release_description: true
+sync_changelog: true
+enable_net: true
+follow_fedora_branching: true
 
 jobs:
 - job: copr_build
   trigger: pull_request
   owner: relativesure
   project: general-repo
-  bootstrap: off
-  enable_net: true
-  follow_fedora_branching: true
   targets:
     - fedora-41-x86_64
     - fedora-rawhide-x86_64
@@ -21,9 +21,6 @@ jobs:
   branch: master
   owner: relativesure
   project: general-repo
-  bootstrap: off
-  enable_net: true
-  follow_fedora_branching: true
   targets:
     - fedora-41-x86_64
     - fedora-rawhide-x86_64
