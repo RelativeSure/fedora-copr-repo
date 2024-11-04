@@ -1,0 +1,21 @@
+packages:
+
+  zellij:
+    downstream_package_name: zellij
+    upstream_package_name: zellij
+    paths: 
+      - ./zellij
+    specfile_path: zellij.spec
+    files_to_sync: 
+      - zellij.spec
+
+jobs:
+- &copr
+  job: copr_build
+  trigger: pull_request
+  targets:
+    - fedora-41-x86_x64
+
+- <<: *copr
+  trigger: commit
+  branch: master
