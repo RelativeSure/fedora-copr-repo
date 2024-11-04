@@ -2,12 +2,12 @@
 
 Name:       zellij
 Version:    0.41.1
-Release:    1%{?dist}
+Release:    1.20241104231028434840.master%{?dist}
 Summary:    A terminal workspace with batteries included.
 
 License:    MIT
 URL:        https://github.com/zellij-org/zellij
-Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
+Source0:    zellij-0.41.1.tar.gz
 
 %if 0%{?el8}
 %else
@@ -28,7 +28,7 @@ Zellij is a workspace aimed at developers, ops-oriented people and anyone who lo
 
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n zellij-0.41.1
 %if 0%{?el8}
   curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y
 %endif

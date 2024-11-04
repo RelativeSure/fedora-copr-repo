@@ -22,6 +22,8 @@ packages:
     specfile_path: zellij.spec
     files_to_sync:
       - zellij.spec
+      - zellij/zellij.spec
+      - .packit.yaml
   zenith:
     downstream_package_name: zenith
     upstream_package_name: zenith
@@ -31,3 +33,5 @@ packages:
     specfile_path: zenith.spec
     files_to_sync:
       - zenith.spec
+      - zenith/zenith.spec
+      - .packit.yaml
