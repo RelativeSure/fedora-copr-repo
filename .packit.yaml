@@ -47,7 +47,7 @@ packages:
       - zellij.spec
       - src:
         - "zellij-*.tar.gz"
-      dest: .
+        dest: .
   zenith:
     downstream_package_name: zenith
     upstream_package_name: zenith
