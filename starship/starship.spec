@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%global github_org starship
 
 Name:       starship
 Version:    1.21.1
@@ -6,7 +7,7 @@ Release:    1%{?dist}
 Summary:    The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 
 License:    ISC
-URL:        https://github.com/starship/starship
+URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
 %if 0%{?el8}

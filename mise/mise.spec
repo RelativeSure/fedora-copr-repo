@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%global github_org jdx
 
 Name:       mise
 Version:    2024.11.0
@@ -6,7 +7,7 @@ Release:    1%{?dist}
 Summary:    dev tools, env vars, task runner
 
 License:    MIT
-URL:        https://github.com/jdx/mise
+URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
 %if 0%{?el8}

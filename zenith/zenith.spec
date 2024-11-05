@@ -1,13 +1,13 @@
 %global debug_package %{nil}
+%global github_org bvaisvil
 
 Name:       zenith
 Version:    0.14.1
 Release:    1%{?dist}
-Summary:    Zenith - sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage
+Summary:    sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage
 
 License:    MIT
-# https://github.com/bvaisvil/zenith/archive/refs/tags/0.14.1.tar.gz
-URL:        https://github.com/bvaisvil/zenith
+URL:        https://github.com/%{bvaisvil}/%{name}
 Source0:    %{url}/archive/refs/tags/%{version}.tar.gz
 
 %if 0%{?el8}
@@ -26,7 +26,7 @@ BuildRequires: perl-IPC-Cmd
 BuildRequires: clang
 
 %description
-Zenith sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage
+%{summary}
 
 %prep
 %autosetup -p1
@@ -51,8 +51,4 @@ strip --strip-all %{buildroot}%{_bindir}/*
 %files
 #%license LICENSE.md
 #%doc README.md
-%{_bindir}/zenith
-
-%changelog
-* Thu May 02 2024 [0.14.1]
-- Yesss
+%{_bindir}/%{name}

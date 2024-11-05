@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%global github_org Schniz
 
 Name:       fnm
 Version:    1.37.2
@@ -6,8 +7,7 @@ Release:    1%{?dist}
 Summary:    Fast and simple Node.js version manager, built in Rust
 
 License:    GPL v3
-# https://github.com/Schniz/fnm/archive/refs/tags/v1.37.2.tar.gz
-URL:        https://github.com/Schniz/fnm
+URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
 %if 0%{?el8}

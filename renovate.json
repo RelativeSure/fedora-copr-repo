@@ -1,11 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "packageRules": [
+  "extends": [
+    "config:recommended"
+  ],
+  "regexManagers": [
     {
-      "matchFileNames": ["**/*.spec"],
-      "versioning": "rpm"
+      "fileMatch": [
+        "^.*\\.spec$"
+      ],
+      "matchStrings": [
+        "%global\\s+github_org\\s+(?<githubOrg>\\S+)",
+        "Name:\\s*(?<depName>\\S+)",
+        "Version:\\s*(?<currentValue>[\\d\\.]+)"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "${{githubOrg}}/${{depName}}",
+      "versioningTemplate": "semver"
     }
   ]
 }
-

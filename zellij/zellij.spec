@@ -1,4 +1,5 @@
 %global debug_package %{nil}
+%global github_org zellij-org
 
 Name:       zellij
 Version:    0.41.1
@@ -6,7 +7,7 @@ Release:    1%{?dist}
 Summary:    A terminal workspace with batteries included.
 
 License:    MIT
-URL:        https://github.com/zellij-org/zellij
+URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
 %if 0%{?el8}
@@ -24,7 +25,7 @@ BuildRequires: perl-FindBin
 BuildRequires: perl-IPC-Cmd
 
 %description
-Zellij is a workspace aimed at developers, ops-oriented people and anyone who loves the terminal. At its core, it is a terminal multiplexer (similar to tmux and screen), but this is merely its infrastructure layer. Zellij includes a layout system, and a plugin system allowing one to create plugins in any language that compiles to WebAssembly.
+%{summary}
 
 
 %prep
