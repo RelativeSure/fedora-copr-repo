@@ -16,6 +16,13 @@ jobs:
   targets:
     - fedora-stable
     - fedora-rawhide-x86_64
+  actions:
+    prepare-files: "make prepare"
+    create-archive:
+      - "make archive"
+      - bash -c "ls -1 ./package-*.tar.gz"
+    changelog-entry:
+      - bash -c 'echo "- New release ${PACKIT_PROJECT_VERSION}"'
 
 #- job: copr_build
 #  trigger: commit
