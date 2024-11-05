@@ -17,12 +17,14 @@ jobs:
     - fedora-stable
     - fedora-rawhide-x86_64
   actions:
-    prepare-files: "make prepare"
-    create-archive:
-      - "make archive"
-      - bash -c "ls -1 ./package-*.tar.gz"
-    changelog-entry:
-      - bash -c 'echo "- New release ${PACKIT_PROJECT_VERSION}"'
+    pre-sync:
+      - tito build -o . --tgz
+    #prepare-files: "make prepare"
+    #create-archive:
+    #  - "make archive"
+   #   - bash -c "ls -1 ./package-*.tar.gz"
+   # changelog-entry:
+    #  - bash -c 'echo "- New release ${PACKIT_PROJECT_VERSION}"'
 
 #- job: copr_build
 #  trigger: commit
@@ -43,6 +45,9 @@ packages:
     specfile_path: zellij.spec
     files_to_sync:
       - zellij.spec
+      - src:
+        - "zellij-*.tar.gz"
+      dest: .
   zenith:
     downstream_package_name: zenith
     upstream_package_name: zenith
