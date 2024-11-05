@@ -4,7 +4,7 @@
 issue_repository: https://github.com/RelativeSure/fedora-copr-repo
 copy_upstream_release_description: true
 sync_changelog: true
-enable_net: true
+#enable_net: true
 srpm_build_deps: ["clang","cmake","cargo","rust","gcc","python3-devel","openssl-devel","perl-devel","openssl-perl","perl-FindBin","perl-IPC-Cmd"]
 
 jobs:
@@ -13,17 +13,17 @@ jobs:
   owner: relativesure
   project: general-repo
   targets:
-    - fedora-41-x86_64
+    - fedora-stable
     - fedora-rawhide-x86_64
 
-- job: copr_build
-  trigger: commit
-  branch: master
-  owner: relativesure
-  project: general-repo
-  targets:
-    - fedora-41-x86_64
-    - fedora-rawhide-x86_64
+#- job: copr_build
+#  trigger: commit
+# branch: master
+#  owner: relativesure
+#  project: general-repo
+#  targets:
+ #   - fedora-41-x86_64
+#    - fedora-rawhide-x86_64
 
 packages:
   zellij:
