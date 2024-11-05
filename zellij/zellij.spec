@@ -1,5 +1,3 @@
-%global debug_package %{nil}
-
 Name:       zellij
 Version:    0.41.1
 Release:    1%{?dist}
@@ -29,9 +27,7 @@ Zellij is a workspace aimed at developers, ops-oriented people and anyone who lo
 
 %prep
 %autosetup -p1
-%if 0%{?el8}
-  curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y
-%endif
+%cargo_prep
 
 
 %install
