@@ -7,11 +7,8 @@ License:    MIT
 URL:        https://github.com/zellij-org/zellij
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
-%if 0%{?el8}
-%else
-BuildRequires: cargo >= 1.39
-BuildRequires: rust >= 1.39
-%endif
+BuildRequires: cargo
+BuildRequires: rust
 BuildRequires: gcc
 BuildRequires: python3-devel
 BuildRequires: cmake
