@@ -17,8 +17,9 @@ jobs:
     - fedora-stable
     - fedora-rawhide-x86_64
   actions:
-    pre-sync:
-      - tito build -o . --tgz
+    fix-specfile: []
+    #pre-sync:
+     # - tito build -o . --tgz
     #prepare-files: "make prepare"
     #create-archive:
     #  - "make archive"
