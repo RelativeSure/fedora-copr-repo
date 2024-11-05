@@ -7,6 +7,7 @@ License:    MIT
 URL:        https://github.com/zellij-org/zellij
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
+BuildRequires: tito
 BuildRequires: cargo
 BuildRequires: rust
 BuildRequires: gcc
