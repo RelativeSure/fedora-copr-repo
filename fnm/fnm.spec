@@ -1,5 +1,6 @@
 %global debug_package %{nil}
 %global github_org Schniz
+# renovate: packageName=Schniz/fnm
 
 Name:       fnm
 Version:    1.37.2

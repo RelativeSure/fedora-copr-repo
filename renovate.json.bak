@@ -10,11 +10,11 @@
         "^.*\\.spec$"
       ],
       "matchStrings": [
-        "# renovate: packageName=(?<packageName>.+?)\\s",
+        "# renovate:\\s*packageNameTemplate=(?<datasource>[^\\/]+)\\/(?<depName>[^\\s]+)",
         "Version:\\s*(?<currentValue>[\\d\\.]+)"
       ],
-      "datasourceTemplate": "github-releases",
-      "versioningTemplate": "rpm"
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver"
     }
   ]
 }

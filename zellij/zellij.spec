@@ -10,6 +10,8 @@ License:    MIT
 URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/v%{version}.tar.gz
 
+# renovate: packageName=zellij-org/zellij
+
 %if 0%{?el8}
 %else
 BuildRequires: cargo >= 1.39

@@ -1,5 +1,6 @@
 %global debug_package %{nil}
 %global github_org bvaisvil
+# renovate: packageName=bvaisvil/zenith
 
 Name:       zenith
 Version:    0.14.1
@@ -28,7 +29,7 @@ BuildRequires: clang
 %description
 %{summary}
 
-%prep
+
 %autosetup -p1
 %if 0%{?el8}
   curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y

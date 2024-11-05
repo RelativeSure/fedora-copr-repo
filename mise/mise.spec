@@ -1,5 +1,6 @@
 %global debug_package %{nil}
 %global github_org jdx
+# renovate: packageName=jdx/mise
 
 Name:       mise
 Version:    2024.11.0
