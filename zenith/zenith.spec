@@ -29,7 +29,7 @@ BuildRequires: clang
 %description
 %{summary}
 
-
+%prep
 %autosetup -p1
 %if 0%{?el8}
   curl https://sh.rustup.rs -sSf | sh -s -- --profile minimal -y
