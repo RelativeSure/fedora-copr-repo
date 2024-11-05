@@ -19,29 +19,19 @@ BuildRequires: perl-FindBin
 BuildRequires: perl-IPC-Cmd
 
 %description
-Zellij is a workspace aimed at developers, ops-oriented people and anyone who loves the terminal. At its core, it is a terminal multiplexer (similar to tmux and screen), but this is merely its infrastructure layer. Zellij includes a layout system, and a plugin system allowing one to create plugins in any language that compiles to WebAssembly.
-
+%{summary}
 
 %prep
-%autosetup -p1
-%cargo_prep
-
+%setup -q
 
 %install
-export CARGO_PROFILE_RELEASE_BUILD_OVERRIDE_OPT_LEVEL=3
-%if 0%{?el8}
-  $HOME/.cargo/bin/cargo install --root=%{buildroot}%{_prefix} --path=.
-%else
-  cargo install --root=%{buildroot}%{_prefix} --path=.
-%endif
+rm -rf %{buildroot}
+mkdir -p %{buildroot}
+cp -a * %{buildroot}
 
-rm -f %{buildroot}%{_prefix}/.crates.toml \
-    %{buildroot}%{_prefix}/.crates2.json
-strip --strip-all %{buildroot}%{_bindir}/*
-
+%clean
+rm -rf %{buildroot}
 
 %files
-%license LICENSE.md
-%doc README.md
-%{_bindir}/zellij
-
+%defattr(-,root,root,-)
+%{_bindir}/*
