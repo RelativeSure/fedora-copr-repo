@@ -48,6 +48,6 @@ strip --strip-all %{buildroot}%{_bindir}/*
 
 
 %files
-%license LICENSE.md
-%doc README.md
+#%license LICENSE.md
+#%doc README.md
 %{_bindir}/%{name}
