@@ -7,7 +7,7 @@ Release:    1%{?dist}
 Summary:    sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage
 
 License:    MIT
-URL:        https://github.com/%{bvaisvil}/%{name}
+URL:        https://github.com/%{github_org}/%{name}
 Source0:    %{url}/archive/refs/tags/%{version}.tar.gz
 
 %if 0%{?el8}
