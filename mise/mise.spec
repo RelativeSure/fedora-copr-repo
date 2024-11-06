@@ -2,7 +2,7 @@
 %global github_org jdx
 
 Name:       mise
-Version:    2024.11.0
+Version:    2024.11.1
 Release:    1%{?dist}
 Summary:    dev tools, env vars, task runner
 
