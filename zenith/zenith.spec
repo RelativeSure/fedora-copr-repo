@@ -1,5 +1,6 @@
 %global debug_package %{nil}
 %global github_org bvaisvil
+# renovate: packageName=bvaisvil/zenith
 
 Name:       zenith
 Version:    0.14.1

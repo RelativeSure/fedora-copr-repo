@@ -1,5 +1,6 @@
 %global debug_package %{nil}
 %global github_org starship
+# renovate: packageName=starship/starship
 
 Name:       starship
 Version:    1.21.1
